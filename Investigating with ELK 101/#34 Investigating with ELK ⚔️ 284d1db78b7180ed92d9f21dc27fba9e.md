@@ -166,7 +166,7 @@ the search.
 
 - In **Fields Pane**, selected `Source_IP`.
     
-    ![Screenshot-2025-04-22-at-21.34.59.png.webp](Screenshot-2025-04-22-at-21.34.59.png.webp)
+    ![Screenshot-2025-04-22-at-21.34.59.png](Screenshot-2025-04-22-at-21.34.59.png)
     
 - Checked the **Top Values** list.
 
@@ -177,7 +177,7 @@ the search.
 - Selected `UserName` field.
 - Viewed top listed usernames.
     
-    ![Screenshot-2025-04-24-at-20.00.24-1120x867.png.webp](Screenshot-2025-04-24-at-20.00.24-1120x867.png.webp)
+    ![Screenshot-2025-04-24-at-20.00.24-1120x867.png](Screenshot-2025-04-24-at-20.00.24-1120x867.png)
     
 
 ---
@@ -187,7 +187,7 @@ the search.
 - Added fields: `IP`, `UserName`, `Source_Country`.
 - Used **“Toggle column in table”** to include them.
     
-    ![Screenshot-2025-04-24-at-20.05.31-2048x966.png.webp](Screenshot-2025-04-24-at-20.05.31-2048x966.png.webp)
+    ![Screenshot-2025-04-24-at-20.05.31-2048x966.png](Screenshot-2025-04-24-at-20.05.31-2048x966.png)
     
 
 ---
@@ -200,7 +200,7 @@ the search.
     
 - Selected `Source_IP` → checked top value.
     
-    ![Screenshot-2025-04-24-at-20.08.16-1146x867.png.webp](Screenshot-2025-04-24-at-20.08.16-1146x867.png.webp)
+    ![Screenshot-2025-04-24-at-20.08.16-1146x867.png](Screenshot-2025-04-24-at-20.08.16-1146x867.png)
     
 
 ---
@@ -210,11 +210,11 @@ the search.
 - Removed “Emanda” filter.
 - On **Timeline Chart**, selected the bar for **11 Jan**.
     
-    ![Screenshot-2025-04-24-at-20.11.29-1300x388.png.webp](Screenshot-2025-04-24-at-20.11.29-1300x388.png.webp)
+    ![Screenshot-2025-04-24-at-20.11.29-1300x388.png](Screenshot-2025-04-24-at-20.11.29-1300x388.png)
     
 - Checked top Source IP values.
     
-    ![Screenshot-2025-04-24-at-20.10.27-1300x867.png.webp](Screenshot-2025-04-24-at-20.10.27-1300x867.png.webp)
+    ![Screenshot-2025-04-24-at-20.10.27-1300x867.png](Screenshot-2025-04-24-at-20.10.27-1300x867.png)
     
 
 ---
@@ -223,7 +223,7 @@ the search.
 
 - Filtered by **Source_IP = 238.163.231.224**.
     
-    ![Skaermbillede-2025-06-03-133724.png.webp](Skaermbillede-2025-06-03-133724.png.webp)
+    ![Skaermbillede-2025-06-03-133724.png](Skaermbillede-2025-06-03-133724.png)
     
 - Added a **negative filter (–)** on **Source_State = New York**.
 - Checked total remaining documents.
@@ -352,11 +352,11 @@ Example:
 
 - Visualized `UserName` vs `action` in a table view.
     
-    ![Skaermbillede-2025-06-03-135233.png.webp](Skaermbillede-2025-06-03-135233.png.webp)
+    ![Skaermbillede-2025-06-03-135233.png](Skaermbillede-2025-06-03-135233.png)
     
 - Sorted results on `failed` actions.
     
-    ![Skaermbillede-2025-06-03-140353.png.webp](Skaermbillede-2025-06-03-140353.png.webp)
+    ![Skaermbillede-2025-06-03-140353.png](Skaermbillede-2025-06-03-140353.png)
     
 
 ---
@@ -365,7 +365,7 @@ Example:
 
 - Added `action` on the x-axis, grouped by `@timestamp`, and used `count()` on y-axis.
     
-    ![Skaermbillede-2025-06-03-141350.png.webp](Skaermbillede-2025-06-03-141350.png.webp)
+    ![Skaermbillede-2025-06-03-141350.png](Skaermbillede-2025-06-03-141350.png)
     
 - Identified total failed attempts in January.
     
