@@ -157,7 +157,7 @@ the search.
 - Used the **Time Filter** (top-right) to select `31 Dec 2021 → 2 Feb 2022`.
 - Pressed **Refresh** to apply the range.
     
-    ![Screenshot-2025-04-22-at-21.30.55-2048x660.png.webp](Screenshot-2025-04-22-at-21.30.55-2048x660.png.webp)
+    ![Screenshot-2025-04-22-at-21.30.55-2048x660.png](Screenshot-2025-04-22-at-21.30.55-2048x660.png)
     
 
 ---
