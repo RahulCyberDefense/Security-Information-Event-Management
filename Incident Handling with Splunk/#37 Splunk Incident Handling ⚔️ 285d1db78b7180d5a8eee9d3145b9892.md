@@ -556,7 +556,7 @@ I visited [**VirusTotal**](https://www.virustotal.com/) and entered the MD5 hash
 
 VirusTotal scanned the hash across multiple antivirus databases and displayed the **associated file name**.
 
-![1_lM-h4o4bq8MIITesSllOuw.webp](1_lM-h4o4bq8MIITesSllOuw.webp)
+![1_lM-h4o4bq8MIITesSllOuw.png](1_lM-h4o4bq8MIITesSllOuw.png)
 
 ### Result:
 
@@ -666,7 +666,7 @@ I investigated the C2 activity used to deface the webserver. I started by search
 index=botsv1 sourcetype=fortigate_utm "poisonivy-is-coming-for-you-batman.jpeg"
 ```
 
-![0_LAzs4CA0qgpZDv2Q.webp](0_LAzs4CA0qgpZDv2Q.webp)
+![0_LAzs4CA0qgpZDv2Q.png](0_LAzs4CA0qgpZDv2Q.png)
 
 Looking into the Fortinet firewall logs, I see the src IP, destination IP, and URL. Then I looked at the fields on the left panel and the field `url` contains the FQDN (Fully Qualified Domain Name) used by the Attacker.
 
@@ -681,7 +681,7 @@ To verify, I also checked the HTTP stream logs for the same artifact:
     ```
     
 
-![0_bhD9Z9mNulkkO1Zs.webp](0_bhD9Z9mNulkkO1Zs.webp)
+![0_bhD9Z9mNulkkO1Zs.png](0_bhD9Z9mNulkkO1Zs.png)
 
 I noted the attacker-controlled domain appearing in both firewall and HTTP logs, and I could also confirm DNS activity against that domain in `stream:dns` if needed.
 
@@ -697,32 +697,32 @@ Steps I took:
 
 1. I used **Robtex** to lookup the domain `prankglassinebracket.jumpingcrab.com` to retrieve IPs and related subdomains.
     
-    ![0_Jo1UTEOKJcFHSGcz.webp](0_Jo1UTEOKJcFHSGcz.webp)
+    ![0_Jo1UTEOKJcFHSGcz.png](0_Jo1UTEOKJcFHSGcz.png)
     
     Some domains/subdomains associated with this domain:
     
-    ![0_RnQuOJqQeA6MIxUG.webp](0_RnQuOJqQeA6MIxUG.webp)
+    ![0_RnQuOJqQeA6MIxUG.png](0_RnQuOJqQeA6MIxUG.png)
     
 2. I queried Robtex for the IP **23.22.63.114** to enumerate domains and related records tied to that IP.
     
-    ![0_OAnjXvm0JeAv5FLD.webp](0_OAnjXvm0JeAv5FLD.webp)
+    ![0_OAnjXvm0JeAv5FLD.png](0_OAnjXvm0JeAv5FLD.png)
     
     What did I find? this IP is associated with some domains that look pretty similar to **the WAYNE Enterprise** site.
     
-    ![0__W_Xu8dHR8Bz7FKu.webp](0__W_Xu8dHR8Bz7FKu.webp)
+    ![0__W_Xu8dHR8Bz7FKu.png](0__W_Xu8dHR8Bz7FKu.png)
     
 3. I used **VirusTotal** to inspect relations for the IP and the domains returned by Robtex.
     - In VirusTotal’s RELATIONS view I observed domains associated with the IP that looked similar to the target company and identified `www.po1s0n1vy.com` among related domains.
         
-        ![0_HLqO1fqrFSgGaPpN.webp](0_HLqO1fqrFSgGaPpN.webp)
+        ![0_HLqO1fqrFSgGaPpN.png](0_HLqO1fqrFSgGaPpN.png)
         
     - In the domain list, I saw the domain that is associated with the attacker `www.po1s0n1vy.com` . Let me search for this domain on the virustotal.
         
-        ![0_2h9aKZaAGn25EjOV.webp](0_2h9aKZaAGn25EjOV.webp)
+        ![0_2h9aKZaAGn25EjOV.png](0_2h9aKZaAGn25EjOV.png)
         
 4. I checked WHOIS (via DomainTools or similar) for domain registration details to hunt for an associated contact email.
     
-    ![0_5VtLf7xreV04na94.webp](0_5VtLf7xreV04na94.webp)
+    ![0_5VtLf7xreV04na94.png](0_5VtLf7xreV04na94.png)
     
 
 Findings / Answers
@@ -739,7 +739,7 @@ Findings / Answers
 
 # Task 10: Delivery Phase
 
-![0_YhgUBAtsjvxAClFj.webp](0_YhgUBAtsjvxAClFj.webp)
+![0_YhgUBAtsjvxAClFj.png](0_YhgUBAtsjvxAClFj.png)
 
 **Goal:** Use the adversary indicators (IPs, domains, emails) to find malware linked to the Poison Ivy infrastructure and confirm its metadata from OSINT / threat-hunting platforms.
 
@@ -751,13 +751,13 @@ I want to search ThreatMiner for artifacts (files/hashes) associated with the at
 
 **What I did:** I searched ThreatMiner for the IP `23.22.63.114`.
 
-![0_r4b2OKDgNgc48xSu.webp](0_r4b2OKDgNgc48xSu.webp)
+![0_r4b2OKDgNgc48xSu.png](0_r4b2OKDgNgc48xSu.png)
 
 **Observation:** ThreatMiner returned three files associated with that IP. One particular file with MD5 hash `c99131e0169171935c5ac32615ed6261` looked malicious and relevant.
 
 Then I clicked on this MD5 hash value to see the metadata and other important information about this particular file.
 
-![0_TjYC3luSJWcouHNs.webp](0_TjYC3luSJWcouHNs.webp)
+![0_TjYC3luSJWcouHNs.png](0_TjYC3luSJWcouHNs.png)
 
 **Result:** Found MD5 `c99131e0169171935c5ac32615ed6261` as a suspicious/malicious artifact.
 
@@ -771,7 +771,7 @@ I want to corroborate the file’s metadata, detection names, and community cont
 
 (Example used: the hash from ThreatMiner.)
 
-![0_a2eRp-2DV15rL_WM.webp](0_a2eRp-2DV15rL_WM.webp)
+![0_a2eRp-2DV15rL_WM.png](0_a2eRp-2DV15rL_WM.png)
 
 [https://www.notion.so](https://www.notion.so)
 
@@ -791,11 +791,11 @@ I want to view dynamic behavior — network communications, DNS requests, contac
 
 https://hybrid-analysis.com/sample/9709473ab351387aab9e816eff3910b9f28a7a70202e250ed46dba8f820f34a8?environmentId=100
 
-![0_KwuLqAaRt_HuiVzl.webp](0_KwuLqAaRt_HuiVzl.webp)
+![0_KwuLqAaRt_HuiVzl.png](0_KwuLqAaRt_HuiVzl.png)
 
 Scrolled down to get more information about this Malware.
 
-![0_bBelxYDrSgz3zjQS.webp](0_bBelxYDrSgz3zjQS.webp)
+![0_bBelxYDrSgz3zjQS.png](0_bBelxYDrSgz3zjQS.png)
 
 **Observation:** Hybrid-Analysis provided extensive behavior information: network contacts, DNS lookups, MITRE ATT&CK mapping, and other indicators that align the sample with malicious activity.
 
