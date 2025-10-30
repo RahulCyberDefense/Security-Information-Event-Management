@@ -75,7 +75,7 @@ I explored the Splunk interface and identified its major UI sections:
 
 ![image.png](image%201.png)
 
-![1_spE-xigqyPutbT297NmLxA.webp](1_spE-xigqyPutbT297NmLxA.webp)
+![1_spE-xigqyPutbT297NmLxA.png](1_spE-xigqyPutbT297NmLxA.png)
 
 **✅ Answer:** `Monitor`
 
@@ -87,7 +87,7 @@ I explored the Splunk interface and identified its major UI sections:
 
 - Clicked on **Add Data → Upload.**
     
-    ![0_p1OlYJYZc3sWM4eO.webp](0_p1OlYJYZc3sWM4eO.webp)
+    ![0_p1OlYJYZc3sWM4eO.png](0_p1OlYJYZc3sWM4eO.png)
     
 - It has a total of 5 steps to successfully upload the data.
     
@@ -111,7 +111,7 @@ I explored the Splunk interface and identified its major UI sections:
     
 - This revealed the total number of events:
     
-    ![1_S5iIWopQa6AwVr5M5xY_gA.webp](1_S5iIWopQa6AwVr5M5xY_gA.webp)
+    ![1_S5iIWopQa6AwVr5M5xY_gA.png](1_S5iIWopQa6AwVr5M5xY_gA.png)
     
 
 **✅ Answer (5.1):** `2862 events`
@@ -123,7 +123,7 @@ I explored the Splunk interface and identified its major UI sections:
 - Opened the `UserName` field in the left panel.
 - Filtered results for **Maleena**.
     
-    ![1_CYfOja4rcXwGKlwGWxhLTQ.webp](1_CYfOja4rcXwGKlwGWxhLTQ.webp)
+    ![1_CYfOja4rcXwGKlwGWxhLTQ.png](1_CYfOja4rcXwGKlwGWxhLTQ.png)
     
 
 **✅ Answer (5.2):** `60 events`
@@ -138,7 +138,7 @@ I explored the Splunk interface and identified its major UI sections:
     Source_ip="107.14.182.38"
     ```
     
-    ![1_ONT7vPnvVOC3TlTbnk7JSQ.webp](1_ONT7vPnvVOC3TlTbnk7JSQ.webp)
+    ![1_ONT7vPnvVOC3TlTbnk7JSQ.png](1_ONT7vPnvVOC3TlTbnk7JSQ.png)
     
 - The logs showed the username associated with this IP.
 
@@ -154,7 +154,7 @@ I explored the Splunk interface and identified its major UI sections:
     Source_Country!="France"
     ```
     
-    ![1_6jnf8ZDA_8rQZwyVPkPoFg.webp](1_6jnf8ZDA_8rQZwyVPkPoFg.webp)
+    ![1_6jnf8ZDA_8rQZwyVPkPoFg.png](1_6jnf8ZDA_8rQZwyVPkPoFg.png)
     
 
 **✅ Answer (5.4):** `2814 events`
@@ -169,7 +169,7 @@ I explored the Splunk interface and identified its major UI sections:
     Source_ip="107.3.206.58"
     ```
     
-    ![1_EDWl3xnNJVjtvagrY1wgAw.webp](1_EDWl3xnNJVjtvagrY1wgAw.webp)
+    ![1_EDWl3xnNJVjtvagrY1wgAw.png](1_EDWl3xnNJVjtvagrY1wgAw.png)
     
 
 **✅ Answer (5.5):** `14 events`
