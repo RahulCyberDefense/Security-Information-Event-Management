@@ -60,7 +60,7 @@ index="main" EventID=13 A1berto
 
 I clicked the `TargetObject` field for the EventID=13 result and found the registry path that was updated for the new user.
 
-![0_kfFr-W_yqllos8z7.webp](0_kfFr-W_yqllos8z7.webp)
+![0_kfFr-W_yqllos8z7.png](0_kfFr-W_yqllos8z7.png)
 
 **Answer (full registry path):** `HKLM\SAM\SAM\Domains\Account\Users\Names\A1berto`
 
@@ -80,7 +80,7 @@ index="main"
 
 I examined the `User` field values and noted the created account `A1berto` is not the same as `Alberto` — the adversary attempted to impersonate `Alberto`.
 
-![0_jaP_oTaDS18nhfpo.webp](0_jaP_oTaDS18nhfpo.webp)
+![0_jaP_oTaDS18nhfpo.png](0_jaP_oTaDS18nhfpo.png)
 
 **Answer (impersonated user):** `Alberto`
 
@@ -102,7 +102,7 @@ index="main" EventID=1 OR EventID=4688 A1berto
 
 From the `CommandLine` field I found a WMIC remote execution command that created the new user.
 
-![0_KOV7uDysNN1soiyw.webp](0_KOV7uDysNN1soiyw.webp)
+![0_KOV7uDysNN1soiyw.png](0_KOV7uDysNN1soiyw.png)
 
 **Answer (command used):**
 
@@ -126,7 +126,7 @@ index="main" EventID="4625" OR EventID="4624" A1berto
 
 **Observation / Answer:**
 
-![0_r06MIe6JrEba33m5.webp](0_r06MIe6JrEba33m5.webp)
+![0_r06MIe6JrEba33m5.png](0_r06MIe6JrEba33m5.png)
 
 No login attempts by the backdoor user were observed during the investigation.
 
@@ -146,13 +146,13 @@ The following query filters Powershell events.
 index="main" EventID="4104" OR EventID="4103"
 ```
 
-![0_Xl09v3EaPti-jQX9.webp](0_Xl09v3EaPti-jQX9.webp)
+![0_Xl09v3EaPti-jQX9.png](0_Xl09v3EaPti-jQX9.png)
 
 **Observation:**
 
 PowerShell logging (EventID 4104/4103) returned events from a single host.
 
-![0_ozOM4a_ftyHzlB9d.webp](0_ozOM4a_ftyHzlB9d.webp)
+![0_ozOM4a_ftyHzlB9d.png](0_ozOM4a_ftyHzlB9d.png)
 
 **Answer (infected host):** `James.browne`
 
@@ -170,7 +170,7 @@ index="main" EventID="4104" OR EventID="4103”
 
 **Observation / Answer:**
 
-![0_QflGcOLrvx542ih7.webp](0_QflGcOLrvx542ih7.webp)
+![0_QflGcOLrvx542ih7.png](0_QflGcOLrvx542ih7.png)
 
 I observed **79** PowerShell events related to the malicious execution.
 
@@ -197,11 +197,11 @@ This modified query will extract the value of “Host Application” from the fi
 
 The `Command` value was base64-encoded. 
 
-![0_tK3Kp2K2GUFAFJlr.webp](0_tK3Kp2K2GUFAFJlr.webp)
+![0_tK3Kp2K2GUFAFJlr.png](0_tK3Kp2K2GUFAFJlr.png)
 
 I copied the encoded value, decoded it externally (CyberChef), and found a web request to a PHP resource.
 
-![0_1ytnD3y9gO6XKZ6G.webp](0_1ytnD3y9gO6XKZ6G.webp)
+![0_1ytnD3y9gO6XKZ6G.png](0_1ytnD3y9gO6XKZ6G.png)
 
 **Answer (full URL observed):** `hxxp[://]10[.]10[.]10[.]5/news[.]php`
 
