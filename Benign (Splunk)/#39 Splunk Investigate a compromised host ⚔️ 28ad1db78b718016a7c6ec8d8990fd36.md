@@ -90,15 +90,15 @@ For this, I clicked the link below to check out the URL provided in the Hint to 
 
 http://lolbas-project.github.io/
 
-![1_ny-GvhDVnwBzQwuwxHixkA.webp](1_ny-GvhDVnwBzQwuwxHixkA.webp)
+![1_ny-GvhDVnwBzQwuwxHixkA.png](1_ny-GvhDVnwBzQwuwxHixkA.png)
 
 Now I need to manually check the processes run by each user from the HR Department against these binaries listed in the URL.
 
-![1_kOGC-Ow4qfXVDi2FlCOpBQ.webp](1_kOGC-Ow4qfXVDi2FlCOpBQ.webp)
+![1_kOGC-Ow4qfXVDi2FlCOpBQ.png](1_kOGC-Ow4qfXVDi2FlCOpBQ.png)
 
 Eventually, I see the user named **haroon** run the **`certutil.exe`** process that is present in the list.
 
-![1_ZeqmZP5tCknVTZsRfXfcMA.webp](1_ZeqmZP5tCknVTZsRfXfcMA.webp)
+![1_ZeqmZP5tCknVTZsRfXfcMA.png](1_ZeqmZP5tCknVTZsRfXfcMA.png)
 
 **Observation:**
 
@@ -124,7 +124,7 @@ index=win_eventlogs UserName="haroon" certutil.exe
 
 **Observation / Result:**
 
-![1_HfFRnV87PGEiKKn6IzBadQ.webp](1_HfFRnV87PGEiKKn6IzBadQ.webp)
+![1_HfFRnV87PGEiKKn6IzBadQ.png](1_HfFRnV87PGEiKKn6IzBadQ.png)
 
 The execution date recorded: **2022-03-04**.
 
@@ -140,7 +140,7 @@ Checking the event log for **`certutil.exe`** process, I found the command used 
 
 ![image.png](image%206.png)
 
-![1_i2HC58BygpW7NNzlfj7wmg.webp](1_i2HC58BygpW7NNzlfj7wmg.webp)
+![1_i2HC58BygpW7NNzlfj7wmg.png](1_i2HC58BygpW7NNzlfj7wmg.png)
 
 **Observation:**
 
@@ -172,7 +172,7 @@ The file contained a recognizable pattern `THM{...}`; retrieving it validates th
 
 **Method:**
 
-![1_c_N57Tf-M2tmVupGUbzsBw.webp](1_c_N57Tf-M2tmVupGUbzsBw.webp)
+![1_c_N57Tf-M2tmVupGUbzsBw.png](1_c_N57Tf-M2tmVupGUbzsBw.png)
 
 I visited the posted URL from the certutil command. The site content revealed the flag.
 
